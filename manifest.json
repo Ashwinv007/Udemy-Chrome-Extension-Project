@@ -1,0 +1,26 @@
+{
+
+    "version": "1.0",
+    "name": "Udemy",
+    "description": "This extension is for Udemy website",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {},
+    "content_scripts": [
+      {
+        "matches": [
+            "https://*/*",
+            "http://*/*"
+        ],
+        "js": ["side-panel.js","content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["popup.html" ],
+        "matches": ["https://*/*", "http://*/*"]
+      }
+    ]
+  }
